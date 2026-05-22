@@ -3,12 +3,6 @@ import pandas as pd
 import pickle
 import pickle
 import streamlit as st
-try:
-    import sklearn
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn==1.6.1"])
-    import sklearn
-
 # Load model
 with open("model.pkl", "rb") as file:
     model = pickle.load(file)
